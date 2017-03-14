@@ -1,0 +1,19 @@
+public class EulerProblem2 {
+
+	public static void main(String[] args) {
+		long num1 = 1;
+		long num2 = 1;
+		long result = 0;
+		long finalNum = 0; 
+		while (result < 4000000) {
+		    if ((result % 2) == 0) {
+		        finalNum += result;
+		    }
+		    result = num1 + num2;
+		    num2 = num1;
+		    num1 = result;
+		}
+	System.out.println(finalNum);
+	}
+
+}

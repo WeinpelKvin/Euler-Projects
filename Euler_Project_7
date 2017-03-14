@@ -1,0 +1,21 @@
+public class EulerProblem7 {
+	public static void main(String[] args){
+	int primes = 0;
+	int number = 2;
+	
+	while (primes != 10001){ 	// The while loop continues while there's not 10001 prime number
+		if (isPrime(number)){ 	// Boolean statement to check if number is prime number
+			primes++;			// increases prime count
+		}
+		number++;				// increases number
+	}
+	System.out.println(--number); //prints prime number
+}
+	public static boolean isPrime(int num){ // Makes num = to number
+			for(int i = 2; i < num; i++){ 	// Goes through possible factors of num
+				if(num % i ==0)				// if num has a factor return false
+					return false;
+			}
+			return true;					// if num is only factorable by itself return true
+		}
+}

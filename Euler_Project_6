@@ -1,0 +1,16 @@
+public class EulerProblem6 {
+	public static void main(String[] args) {
+		int n = 100;
+		int sum = 0;
+		int sumN = 0;
+		int difference = 0;
+		
+		for(int i = 1; i <= n; i++){ // Goes through the numbers of 1 - 100
+			sum += i*i;		// Squares the current value of i
+			sumN += i;		// Adds i to the sum of the numbers of 1 - 100
+		}
+		sumN = sumN*sumN; 	// Squares all the sums of 1 - 100
+		difference = sumN - sum;	 // Subtracts sumN - sum
+		System.out.println(difference); // Prints the Difference 
+	}
+}
